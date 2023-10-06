@@ -1,4 +1,4 @@
-import { Button, TableColumn } from '@backstage/core-components'
+import { LinkButton, TableColumn } from '@backstage/core-components'
 import React from 'react'
 
 export const columns: TableColumn[] = [
@@ -53,13 +53,13 @@ export const columns: TableColumn[] = [
     title: '',
     field: 'repoUrl',
     render: (rowData: any) => (
-      <Button
-        to={`${rowData.repoUrl}/artifacts-tab/artifacts/${rowData.artifactDigest}`}
+      <LinkButton
+        to={`${rowData.repoUrl}/artifacts-tab/artifacts/${rowData.tagDigest}`}
         color="primary"
         variant="contained"
       >
         Learn More
-      </Button>
+      </LinkButton>
     ),
   },
 ]
